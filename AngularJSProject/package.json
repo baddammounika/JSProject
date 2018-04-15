@@ -1,0 +1,26 @@
+{
+  "name": "json-data-table",
+  "version": "0.0.1",
+  "description": "Example project to show if webpack works for solvians too",
+  "main": "app.js",
+  "author": "Marco Pivetta <ocramius@gmail.com>",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "angular": "^1",
+    "angular-mock": "^1.0.0",
+    "angularjs-server": "0.0.31",
+    "http-server": "^0.11.1"
+  },
+  "devDependencies": {
+    "karma": "^2.0.0",
+    "karma-chrome-launcher": "^2.2.0",
+    "karma-jasmine": "^1.1.1"
+  },
+  "scripts": {
+    "start": "index.html",
+    "test": "karma start karma.conf.js"
+  },
+  "keywords": [
+    "mounika-project"
+  ]
+}

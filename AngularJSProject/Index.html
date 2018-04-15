@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="\angular-1.6.9\angular.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="styles.css"  />
+</head>
+
+<body>
+        
+    <div class="container" ng-app="jsonTableModule" ng-controller="tableController" style="height: 100%">
+        <table class="table table-bordered">
+                <thead class="thead-dark">
+            <tr>
+                <th class="col-width-100" ng-click="sortBy('userId')" >User Id 
+                    <span ng-if="propertyName==='userId' && !reverse" class="glyphicon glyphicon-arrow-up"></span>
+                    <span ng-if="propertyName==='userId' && reverse" class="glyphicon glyphicon-arrow-down"></span>
+                </th>
+                <th class="col-width-100" ng-click="sortBy('id')" >Id 
+                        <span ng-if="propertyName==='id' && !reverse" class="glyphicon glyphicon-arrow-up"></span>
+                        <span ng-if="propertyName==='id' && reverse" class="glyphicon glyphicon-arrow-down"></span>
+                </th>
+                <th class="col-width-100" ng-click="sortBy('title')">Title 
+                        <span ng-if="propertyName==='title' && !reverse" class="glyphicon glyphicon-arrow-up"></span>
+                        <span ng-if="propertyName==='title' && reverse" class="glyphicon glyphicon-arrow-down"></span>
+                </span></th>
+                <th ng-click="sortBy('body')">Body 
+                        <span ng-if="propertyName==='body' && !reverse" class="glyphicon glyphicon-arrow-up"></span>
+                        <span ng-if="propertyName==='body' && reverse" class="glyphicon glyphicon-arrow-down"></span>
+                </span></th>
+            </tr>
+            </thead>
+            <tr ng-repeat="row in rows">
+                <td>{{row.userId}}</td>
+                <td>{{row.id}}</td>
+                <td>{{row.title}}</td>
+                <td>{{row.body}}</td>
+            </tr>
+        </table>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
